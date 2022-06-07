@@ -20,4 +20,17 @@ const basket: Basket = {
   baz: 'qux',
 }
 
+class Bar {
+  bar() {
+    return 42
+  }
+}
+
+function foo() {
+  return 42
+}
+
+type FooReturn = ReturnType<typeof foo>
+type BarReturn = ReturnType<Bar['bar']>
+
 export {}
